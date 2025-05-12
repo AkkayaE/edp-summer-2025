@@ -20,12 +20,34 @@ animal = {
     "temperature" : 37.3
 }
 sensors = [
-    {"id": "SEN001", "type": "Temperature", "location": "Cage A1"},
-    {"id": "SEN002", "type": "Humidity", "location": "Cage B1"},
-    {"id": "SEN003", "type": "Motion", "location": "Cage C1"}
+    {"id": "SEN001", "type": "Temperature", "location": "Cage A1", "employee": "Jeff"},
+    {"id": "SEN002", "type": "Humidity", "location": "Cage B1", "employee": "Mike"},
+    {"id": "SEN003", "type": "Motion", "location": "Cage C1", "employee": "Nil"}
 ]
 for sensor in sensors:
     print(f"Sensor ID: {sensor['id']}")
     print(f"Type: {sensor['type']}")
     print(f"Location: {sensor['location']}")
+    print(f"Employee: {sensor['employee']}")
     print("-" * 30)
+
+employees = {
+    "Guard": "Jeff",
+    "Technician": "Mike",
+    "Electrician": "Nil"
+}
+event_to_employee = {
+    "motion detected": "Guard",
+    "door opened": "Technician",
+    "power out": "Electrician"
+}
+for event in event_to_employee:
+    role = event_to_employee.get(event, "Role not found")
+    employee = employees.get(role, "Employee not found")
+    print(f"Event: {event}")
+    print(f"Required Role: {role}")
+    print(f"Assigned Employee: {employee}")
+    print("-" * 30)
+
+
+    
