@@ -49,5 +49,39 @@ for event in event_to_employee:
     print(f"Assigned Employee: {employee}")
     print("-" * 30)
 
+temperature = float(input("Enter the current temperature:"))
+if temperature > 40:
+    print("ALERT: Extremely hot! Stay indoors.")
+elif temperature > 30:
+    print("Warning: It's quite hot! Stay hydrated.")
+elif temperature > 20:
+    print("The weather is warm and pleasant.")
+elif temperature > 20:
+    print("It's a bit chilly. Wear a light jacket.")
+else:
+    print("Cold weather! Dress warmly.")
 
+
+sensor_events = [
+    "motion detected", "door opened", "power out"
+]
+event_count = {}
+for event in sensor_events:
+    role = event_to_employee.get(event, "Unknown Role")
+    employee = employees.get(role, "No Employee Assigned")
+
+    print(f"Event: {event}")
+    print(f"Required Role: {role}")
+    print(f"Assigned Employee: {employee}")
+    print("-" * 30)
+
+if event in event_count:
+    event_count[event] += 1
+else:
+    event_count[event] = 1
+
+print("\nEvent Type Summary:")
+for event_type, count in event_count.items():
+    print(f"{event_type}: {count} occurrence(s)")
+    
     
