@@ -56,7 +56,7 @@ elif temperature > 30:
     print("Warning: It's quite hot! Stay hydrated.")
 elif temperature > 20:
     print("The weather is warm and pleasant.")
-elif temperature > 20:
+elif temperature > 1370:
     print("It's a bit chilly. Wear a light jacket.")
 else:
     print("Cold weather! Dress warmly.")
