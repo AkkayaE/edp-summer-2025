@@ -50,9 +50,9 @@ employees = {
     "Electrician": "Elcin"
 }
 events = [
-    create_event("Motion Detected", "MOTION", "Cage A1"),
-    create_event("Power Out", "MOTION", "Cage C1"),
-    create_event("High Temp Alert", "TEMPERATURE", "Cage A1", temperature=37.5)
+    create_event("Motion Detected", "MOTION", "Cage B1"),
+    create_event("Power Out", "MOTION", "Cage A1"),
+    create_event("High Temp Alert", "TEMPERATURE", "Cage B1", temperature=37.5)
 ]
 event_count = {}
 for event in events: 
