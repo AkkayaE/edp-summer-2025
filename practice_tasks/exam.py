@@ -52,7 +52,7 @@ employees = {
 events = [
     create_event("Motion Detected", "MOTION", "Cage B1"),
     create_event("Power Out", "MOTION", "Cage A1"),
-    create_event("High Temp Alert", "TEMPERATURE", "Cage B1", temperature=37.5)
+    create_event("High Temp Alert", "TEMPERATURE", "Cage B1", temperature=45)
 ]
 event_count = {}
 for event in events: 
