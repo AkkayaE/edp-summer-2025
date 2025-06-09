@@ -83,5 +83,7 @@ else:
 print("\nEvent Type Summary:")
 for event_type, count in event_count.items():
     print(f"{event_type}: {count} occurrence(s)")
+
+    
     
     
